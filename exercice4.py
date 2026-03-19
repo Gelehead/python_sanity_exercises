@@ -36,7 +36,7 @@ Classement :
 
 # TODO : Commencez votre code ici
 
-# zzzzzzzzzz
+# zzzzzzzzzzz
 names = []
 for i in int(input()) : 
     temp = input()
