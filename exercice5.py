@@ -29,7 +29,20 @@ Résultat : 5 (Deux plus grands indices : 1 et 2. Somme 3 > 1)
 
 # TODO : Commencez votre code ici
 
-while True : 
-  nums = list(map(int, input().split()))
-  if nums : break
+while True:
+    try:
+        nums = list(map(int, input("Entrez la liste de nombres : ").split()))
+        if nums: break
+    except ValueError: pass
+    print("Erreur : veuillez entrer des nombres valides séparés par des espaces.")
 
+while True:
+    try: k = int(input("Entrez la valeur k : ")); break
+    except ValueError: print("Erreur : veuillez entrer un nombre entier valide.")
+
+idx = {}
+for i, n in enumerate(nums): idx.setdefault(n, []).append(i)
+
+res = next(((v, l[-2], l[-1]) for v, l in idx.items() if len(l) >= 2 and l[-2] + l[-1] > k), None)
+
+print(f"Résultat : {res[0]} (Deux plus grands indices : {res[1]} et {res[2]}. Somme {res[1]+res[2]} > {k})" if res else "Résultat : Aucun duplicata ne respecte la condition.")
