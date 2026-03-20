@@ -49,3 +49,20 @@ Résultat :
 {0: []}
 """
 #TODO commencer votre programme
+
+dictionnaire = {}
+while True:
+    nombre = input("Veuillez entrer un nombre (ou 'stop' pour arrêter) : ")
+    if nombre == "stop":
+        break
+    else:
+        nombre = int(nombre)
+        diviseurs = []
+        for i in range(1, abs(nombre) + 1):
+            if nombre % i == 0:
+                diviseurs.append(i)
+        dictionnaire[nombre] = diviseurs
+
+#il faut que ça marche avec des nombres negatifs aussi, donc on peut utiliser la valeur absolue du nombre pour trouver les diviseurs
+print("Résultat : ")
+print(dictionnaire)

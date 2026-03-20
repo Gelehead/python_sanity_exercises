@@ -17,7 +17,7 @@ Résultat : {'a': ['allo'], 'l': ['allo'], 'o': ['allo']}
 """
 # TODO: Commencez votre programme ici
 
-sentence = input().lower().strip(".,?!")
+sentence = input("Veuillez entrer une phrase : ").lower().strip(".,?!")
 
 dic = {}
 

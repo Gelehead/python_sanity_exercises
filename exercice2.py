@@ -22,7 +22,7 @@ Résultat : {'ceci': 1, 'est': 1, 'une': 2, 'phrase': 2, 'tellement': 1, 'redond
 ## TODO: Commencez votre code ici
 
 # flemme d expliquer a chaque fois
-sentence = input().lower()
+sentence = input("Veuillez entrer une phrase : ").lower()
 dic = {}
 
 for word in [x.strip(",.!?") for x in sentence.split(" ")] :

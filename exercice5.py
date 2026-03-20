@@ -28,3 +28,8 @@ Résultat : 5 (Deux plus grands indices : 1 et 2. Somme 3 > 1)
 """
 
 # TODO : Commencez votre code ici
+
+while True : 
+  nums = list(map(int, input().split()))
+  if nums : break
+

@@ -36,10 +36,25 @@ Classement :
 
 # TODO : Commencez votre code ici
 
-# zzzzzzzzzzz
-names = []
-for i in int(input()) : 
-    temp = input()
-    while not (int(temp) >= 0 and int(temp) <= 20) :
-        temp = input()
-    
+#consigne pas claire : "entre 0 et 20", inclus? 
+
+while True : 
+    nb_pilots = input("Veuillez entrer le nombre de pilotes : ")
+    if nb_pilots.isnumeric() and int(nb_pilots) > 0 :
+        break
+
+nb_pilots = int(nb_pilots)
+
+tuples = []
+for i in range(nb_pilots) :
+    name = input("Nom du pilote : ")
+    while True :
+        temp_score = input("Score : ")
+        if temp_score.isnumeric() and (int(temp_score) >= 0) and int(temp_score) <= 20 :
+            break
+    tuples.append((name, int(temp_score)))
+
+tuples.sort(key=lambda x : x[1])
+print("Classement :")
+for tuple in tuples : 
+    print(tuple)

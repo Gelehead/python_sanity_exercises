@@ -28,7 +28,7 @@ Destinations communes : alger lyon
 # les exos commencent a etre vrm repetitifs
 txt = []
 for i in range(3):
-    txt.append(input().lower().strip("%:&^@$#()+[]").split())
+    txt.append(input("Ami", i, ": ").lower().strip("%:&^@$#()+[]").split())
 
 dest = sorted(list(set(txt[0]) & set(txt[1]) & set(txt[2])))
 
